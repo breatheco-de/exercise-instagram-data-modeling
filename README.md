@@ -1,30 +1,20 @@
-# Flask Boilerplate 4Geeks Academy
+# Create the databse model for Instagram
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/flask-rest-hello.git)
+As initial boilerplate you already have a couple of database tables/models as an example.
 
-1. Make sure you have python 3.6+
-```sh
-pipenv shell
-pipenv install
-```
+Here is a 4min video explaining what UML is: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
 
-2. Run the migrations
-```sh
-$ flask db upgrade
-```
+## Instructions
 
-3. Run flask
-```
-$ flask run -p 3000
-```
+Your Job is to update he `src/models.py` file with the code needed to replicate he instagram data model.
 
-## What to do next?
+The project is using the SQLAlchemy Python library to generate the database.
 
-There is an example API working with an database.
+- What tables you think instagram my have on its database: E.g: Post, User, etc.?
+- What properties should go inside the user? or inside the Post table?
+- Please add at least 4 models with all of its properties.
+- Degenerate the diagram.png file at the end by running `$ python3 models.py` on the console.
 
-## Migrate every time you change your models
+## How to generate the UML diagram?
 
-You have to generate the migrations for every update your make to your models:
-```
-$ flask db migrate
-```
+Type `$ python3 models.py` on the console.
