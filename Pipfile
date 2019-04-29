@@ -13,3 +13,4 @@ eralchemy = "*"
 python_version = "3.6"
 
 [scripts]
+diagram="python3 src/models.py"
