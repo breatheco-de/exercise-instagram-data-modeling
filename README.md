@@ -17,5 +17,12 @@ The project is using the SQLAlchemy Python library to generate the database.
 
 ## ❔How to generate the UML diagram?
 
-Type `$ python3 models.py` on the console.
+Remember to install dependencies:
+`$ pipenv install`
+
+and run the environment:
+`$ pipenv shell`
+
+Type `$ python3 src/models.py` on the console.
+
 Open he file `diagram.png` to check out your URML diagram!
