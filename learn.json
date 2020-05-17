@@ -1,0 +1,12 @@
+{
+	"status": "published",
+	"title" : "Building Instagram.com Database Model",
+	"slug" : "instagram-data-modeling",
+	"duration" : 3,
+	"difficulty": "easy",
+	"syntax": "python",
+	"description" : "Use your recently adquired knowledge to build instagram.com user stories",
+	"talents": [
+		{ "badge": "fully-committed", "points": 5 }
+	]
+}
