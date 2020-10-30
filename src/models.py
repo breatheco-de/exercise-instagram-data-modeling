@@ -44,8 +44,13 @@ class Comment(Base):
     autor_id = Column(Integer, ForeignKey('user.id'))
     post_id = Column(Integer, ForeignKey('post.id'))
 
+<<<<<<< HEAD
 def to_dict(self):
     return {}
+=======
+    def to_dict(self):
+        return {}
+>>>>>>> 3babc1f4862d10c9173393f1b045b1d63653c1a2
 
 ## Draw from SQLAlchemy base
 render_er(Base, 'diagram.png')
