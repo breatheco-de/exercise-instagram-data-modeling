@@ -10,7 +10,7 @@ sqlalchemy = "*"
 eralchemy = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.6.9"
 
 [scripts]
 diagram="python3 src/models.py"
