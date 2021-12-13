@@ -1,5 +1,7 @@
 # Create the database model for Instagram
 
+**Important**: To do this activity you need to `fork` this repo into your **Github** account and then open the forked repo on Gitpod.
+
 Inside he `src/models.py` file you will find a couple of classes describing an example database.
 
 Here is a 4min video explaining what UML is: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
@@ -11,7 +13,8 @@ We are going to be creating the Entity Relationship Diagram for Instagram Databa
 
 > 🔥 You can use this FREE tool to practice your diagram for the first time: https://app.quickdatabasediagrams.com/#/d/
 
-## 💻 Instalation
+
+## 💻 Installation
 
 1. Get inside the environment `$ pipenv shell`
 
