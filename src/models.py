@@ -8,26 +8,49 @@ from eralchemy import render_er
 
 Base = declarative_base()
 
-class Person(Base):
-    __tablename__ = 'person'
-    # Here we define columns for the table person
-    # Notice that each column is also a normal Python instance attribute.
+class User(Base):
+    __tablename__ = 'user'
     id = Column(Integer, primary_key=True)
-    name = Column(String(250), nullable=False)
+    username = Column(String(50), nullable=False, unique=True)
+    email = Column(String(50), nullable=False, unique=True)
+    password = Column(String(50), nullable=False)
+    posts = relationship("Post", backref="poster")
+    followers = relationship("Follower", backref="followed")
 
-class Address(Base):
-    __tablename__ = 'address'
-    # Here we define columns for the table address.
-    # Notice that each column is also a normal Python instance attribute.
+    def __repr__(self):
+        return f"User #{self.id}: {self.username}"
+
+class Post(Base):
+    __tablename__ = 'post'
     id = Column(Integer, primary_key=True)
-    street_name = Column(String(250))
-    street_number = Column(String(250))
-    post_code = Column(String(250), nullable=False)
-    person_id = Column(Integer, ForeignKey('person.id'))
-    person = relationship(Person)
+    creator = Column(Integer, ForeignKey("user.id"), nullable=False)
+    title = Column(String(50), nullable=False)
+    image = Column(String(150), nullable=False)
+    description = Column(String(300))
+    comments = relationship("Comment", backref="commented_post")
 
-    def to_dict(self):
-        return {}
+    def __repr__(self):
+        return f"#{self.id}: {self.title} | {self.description}"
+
+class Comment(Base):
+    __tablename__ = 'comment'
+    id = Column(Integer, primary_key=True)
+    post_id = Column(Integer, ForeignKey("post.id"), nullable=False)
+    user_id = Column(Integer, ForeignKey("user.id"), nullable=False)
+    comment = Column(String(300), nullable=False)
+    
+    def __repr__(self):
+        return f"User #{self.user.id} commented on post #{self.post_id}: {self.comment}"
+
+
+class Follower(Base):
+    __tablename__ = 'follower'
+    id = Column(Integer, primary_key=True)
+    follower = Column(Integer, ForeignKey("user.id"))
+    following = Column(Integer, ForeignKey("user.id"))
+    
+    def __repr__(self):
+        return f"User #{self.follower} is following {self.following}"
 
 ## Draw from SQLAlchemy base
 try:
