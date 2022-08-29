@@ -1,6 +1,6 @@
 # Create the database model for Instagram
 
-**Important**: To do this activity you need to `fork` this repo into your **Github** account and then open the forked repo on Gitpod.
+**Important**: To do this activity you need to `fork` [this repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) into your **Github** account and then open the forked repo on Gitpod.
 
 Inside he `src/models.py` file you will find a couple of classes describing an example database.
 
