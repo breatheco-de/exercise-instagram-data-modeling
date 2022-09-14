@@ -10,5 +10,7 @@
 	"description" : "Use your recently adquired knowledge to build instagram.com user stories",
 	"talents": [
 		{ "badge": "fully-committed", "points": 5 }
-	]
+	],
+    "autoPlay": false,
+    "projectType": "project"
 }
