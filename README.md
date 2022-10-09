@@ -2,6 +2,8 @@
 
 Inside he `src/models.py` file you will find a couple of classes describing an example database.
 
+Here is a 4min video explaining what UML is: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
+
 Th `diagram.png` file generates a database chart based on the classes that you will be creating. Such charts in Database Management are referred to as ERDs (Entity Relatonship Diagrams). 
 
 Please watch these two short videos explaining ERDs: 
