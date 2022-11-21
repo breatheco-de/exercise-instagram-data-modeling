@@ -6,11 +6,11 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-sqlalchemy = "==1.3.23"
-eralchemy = "*"
+sqlalchemy = "*"
+eralchemy2 = "*"
 
 [requires]
-python_version = "3.6.1"
+python_version = "3.6"
 
 [scripts]
 diagram="python3 src/models.py"
