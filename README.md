@@ -1,4 +1,6 @@
+<!--hide-->
 # Create the database model for Instagram
+<!--endhide-->
 
 **Important**: To do this activity you need to `fork` [this repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) into your **Github** account and then open the forked repo on Gitpod.
 
@@ -6,7 +8,7 @@ Inside he `src/models.py` file you will find a couple of classes describing an e
 
 Here is a 4min video explaining what UML is: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
 
-Th `diagram.png` file generates a database chart based on the classes that you will be creating. Such charts in Database Management are referred to as ERDs (Entity Relatonship Diagrams). 
+The `diagram.png` file generates a database chart based on the classes that you will be creating. Such charts in Database Management are referred to as ERDs (Entity Relatonship Diagrams). 
 
 Please watch these two short videos explaining ERDs: 
 [https://www.youtube.com/watch?v=QpdhBUYk7Kk&t=4s](https://www.youtube.com/watch?v=QpdhBUYk7Kk&t=4s)
@@ -37,7 +39,7 @@ Your job is to update the `src/models.py` file with the code needed to replicate
 
 The project is using the SQLAlchemy Python library to generate the database.
 
-- What tables do you think instagram might have on its database: E.g: Post, User, etc.?
+- What tables do you think Instagram might have on its database: E.g: Post, User, etc.?
 - What properties should go inside the user? or inside the Post table?
 - Please add at least 4 models with all of its properties.
 - Refresh the `diagram.png` file at the end by running `$ python3 src/models.py` on the console.
