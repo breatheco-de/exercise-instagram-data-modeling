@@ -8,23 +8,53 @@ from eralchemy2 import render_er
 
 Base = declarative_base()
 
-class Person(Base):
-    __tablename__ = 'person'
-    # Here we define columns for the table person
-    # Notice that each column is also a normal Python instance attribute.
+class User(Base):
+    __tablename__ = 'user'
     id = Column(Integer, primary_key=True)
-    name = Column(String(250), nullable=False)
+    name = Column(String(50), nullable=False)
+    email = Column (String(50), nullable=False)
+    post_id = Column(Integer, ForeignKey('post.id'), nullable=False)
 
-class Address(Base):
-    __tablename__ = 'address'
-    # Here we define columns for the table address.
-    # Notice that each column is also a normal Python instance attribute.
+class Follower(Base):
+    __tablename__ = 'follower'
     id = Column(Integer, primary_key=True)
-    street_name = Column(String(250))
-    street_number = Column(String(250))
-    post_code = Column(String(250), nullable=False)
-    person_id = Column(Integer, ForeignKey('person.id'))
-    person = relationship(Person)
+    name = Column(String(50), nullable = False)
+    user_id = Column(Integer, ForeignKey('user.id'), nullable =False)
+
+
+class Comment(Base):
+    __tablename__ = 'comment'
+    id = Column(Integer, primary_key = True)
+    Content = Column(String(140), nullable = False)
+    author_id = Column(Integer, ForeignKey('follower.id'), nullable = False)
+
+
+class Post (Base):
+    __tablename__ = 'post'
+    id= Column(Integer, primary_key = True)
+    post_title = Column(String(50), nullable = False)
+    post_content = Column(String(250), nullable =False)
+    media_id = Column(String, ForeignKey('media.id'), nullable = True)
+    comment_id = Column(String, ForeignKey('comment.id'),nullable = True)
+    author_id = Column(String, ForeignKey('user.id'), nullable= False)
+    like_id = Column(Integer, ForeignKey('like.id'), nullable = True)
+
+class Media (Base):
+    __tablename__ = 'media'
+    id= Column(Integer, primary_key = True)
+    type = Column(String(50), nullable = False)
+    url = Column(String(250), nullable =False)
+
+class like (Base):
+    __tablename__ = 'like'
+    id = Column(Integer, primary_key = True)
+    count =Column(Integer, nullable = False)
+    like_author = Column(String, ForeignKey('follower.id'), nullable = False)
+    
+
+    
+
+
 
     def to_dict(self):
         return {}
