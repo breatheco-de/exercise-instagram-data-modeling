@@ -34,6 +34,13 @@ class User(Base):
     firstname = Column(String(250), nullable=True)
     lastname = Column(String(250), nullable=True)
     email = Column(String(250), nullable=True)
+    #nuevos atributos de proyecto final
+    direccion = Column(String(120), unique=False, nullable=False)
+    telefono = Column(Integer, unique=True, nullable=False)
+    codigo_postal = Column(Integer, unique=False, nullable=False)
+    comunidad_autonoma_id = Column(Integer, ForeignKey('comunidades_autonomas.id'),nullable=False)
+    provincia_id = Column(Integer, ForeignKey('provincias.id'),nullable=False)
+
     posts = relationship('Post', backref='user', lazy=True)
     comments = relationship('Comment', backref='user', lazy=True)
     followers = relationship('Follower', secondary= followers, lazy='subquery',
@@ -43,6 +50,53 @@ class User(Base):
     def to_dict(self):
         return {}
     
+#tablas de proyecto
+class ComunidadAutonoma(Base):
+    __tablename__ = 'comunidades_autonomas'
+    id = Column(Integer, primary_key=True, nullable=False)
+    name = Column(String(250), nullable=False)
+    user = relationship('User', backref='comunidades_autonomas', lazy=True)
+    provincia = relationship('Provincia', backref='comunidades_autonomas', lazy=True)
+
+    def to_dict(self):
+        return {}
+    
+class Provincia(Base):
+    __tablename__ = 'provincias'
+    id = Column(Integer, primary_key=True, nullable=False)
+    name = Column(String(250), nullable=False)
+    user = relationship('User', backref='provincias', lazy=True)
+    comunidad_autonoma_id = Column(Integer, ForeignKey('comunidades_autonomas.id'),nullable=False)
+
+    def to_dict(self):
+        return {}
+
+class PerfilProductor(Base):
+    __tablename__ = 'perfil_productores'
+    # Here we define columns for the table address.
+    # Notice that each column is also a normal Python instance attribute.
+    id = Column(Integer, primary_key=True, nullable=False)
+    #user_id =
+    nombre_huerta = Column(String(250), nullable=True)
+    foto_portada = Column(String(250), nullable=True)
+    foto_perfil = Column(String(250), nullable=True)
+    problemas = Column(String(250), nullable=True)
+    donde_encontrar = Column(String(250), nullable=True)
+    latitud = Column(String(250), nullable=True)
+    longitud = Column(String(250), nullable=True)
+
+
+    # comunidad_autonoma_id = Column(Integer, ForeignKey('comunidades_autonomas.id'),nullable=False)
+    # provincia_id = Column(Integer, ForeignKey('provincias.id'),nullable=False)
+
+    # posts = relationship('Post', backref='user', lazy=True)
+    # comments = relationship('Comment', backref='user', lazy=True)
+    # followers = relationship('Follower', secondary= followers, lazy='subquery',
+    #     backref= backref('users', lazy=True))
+   
+
+    def to_dict(self):
+        return {}
 
 class Media(Base):
     __tablename__ = 'media'
