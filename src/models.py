@@ -84,16 +84,7 @@ class PerfilProductor(Base):
     donde_encontrar = Column(String(250), nullable=True)
     latitud = Column(String(250), nullable=True)
     longitud = Column(String(250), nullable=True)
-
-
-    # comunidad_autonoma_id = Column(Integer, ForeignKey('comunidades_autonomas.id'),nullable=False)
-    # provincia_id = Column(Integer, ForeignKey('provincias.id'),nullable=False)
-
-    # posts = relationship('Post', backref='user', lazy=True)
-    # comments = relationship('Comment', backref='user', lazy=True)
-    # followers = relationship('Follower', secondary= followers, lazy='subquery',
-    #     backref= backref('users', lazy=True))
-   
+ 
 
     def to_dict(self):
         return {}
