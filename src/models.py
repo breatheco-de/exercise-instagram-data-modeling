@@ -89,6 +89,24 @@ class PerfilProductor(Base):
     def to_dict(self):
         return {}
 
+class Producto(Base):
+    __tablename__ = 'productos'
+    # Here we define columns for the table address.
+    # Notice that each column is also a normal Python instance attribute.
+    id = Column(Integer, primary_key=True, nullable=False)
+    #user_id =
+    nombre = Column(String(250), nullable=True)
+    variedad = Column(String(250), nullable=True)
+    cantidad = Column(String(250), nullable=True)
+    unidad_medida = Column(String(250), nullable=True)
+    precio = Column(String(250), nullable=True)
+  
+
+    def to_dict(self):
+        return {}    
+
+
+
 class Media(Base):
     __tablename__ = 'media'
     # Here we define columns for the table address.
