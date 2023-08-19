@@ -41,6 +41,7 @@ class User(Base):
     provincia_id = Column(Integer, ForeignKey('provincias.id'),nullable=False)
     #one2one relationship with perfil_productor
     productor = relationship("PerfilProductor", uselist=False,back_populates="user")
+    favoritos = relationship('favoritos_productores', backref='user', lazy=True)
     #fin de one2one relationship with user
 
     # posts = relationship('Post', backref='user', lazy=True)
@@ -101,7 +102,6 @@ class Producto(Base):
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True, nullable=False)
     productor_id = Column(Integer, ForeignKey('perfil_productores.id'),nullable=False)
-    #user_id =
     nombre = Column(String(250), nullable=True)
     variedad = Column(String(250), nullable=True)
     cantidad = Column(Integer, nullable=True)
@@ -112,6 +112,17 @@ class Producto(Base):
     def to_dict(self):
         return {}    
 
+class FavoritoProductor(Base):
+    __tablename__ = 'favoritos_productores'
+    id = Column(Integer, primary_key=True, nullable=False)
+    user_id = Column(Integer, ForeignKey('user.id'),nullable=False)
+    productor_id = Column(Integer, ForeignKey('perfil_productores.id'),nullable=False)
+    
+    
+  
+
+    def to_dict(self):
+        return {}    
 
 
 # class Media(Base):
