@@ -91,6 +91,8 @@ class PerfilProductor(Base):
     donde_encontrar = Column(String(250), nullable=True)
     latitud = Column(Float, nullable=True)
     longitud = Column(Float, nullable=True)
+    # relationship with favorito
+    favoritos = relationship('favoritos_productores', backref='perfil_productores', lazy=True)
  
 
     def to_dict(self):
