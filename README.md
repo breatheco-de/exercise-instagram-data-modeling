@@ -2,17 +2,17 @@
 # Create the database model for Instagram
 <!--endhide-->
 
-**Important**: To do this activity you need to `fork` [this repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) into your **Github** account and then open the forked repo on Gitpod.
+**Important**: To do this activity you need to `fork` [this repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) into your **Github** account and then open the forked repo on Codespaces (recommended) or Gitpod.
 
-Inside he `src/models.py` file you will find a couple of classes describing an example database.
+Inside the `src/models.py` file, you will find a couple of classes describing an example database.
 
-Here is a 4min video explaining what UML is: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
+Here is a 10 min video explaining what UML is: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
 
 The `diagram.png` file generates a database chart based on the classes that you will be creating. Such charts in Database Management are referred to as ERDs (Entity Relatonship Diagrams). 
 
 Please watch these two short videos explaining ERDs: 
-[https://www.youtube.com/watch?v=QpdhBUYk7Kk&t=4s](https://www.youtube.com/watch?v=QpdhBUYk7Kk&t=4s)
-[https://www.youtube.com/watch?v=-CuY5ADwn24&t=738s](https://www.youtube.com/watch?v=-CuY5ADwn24&t=738s)
++ [https://www.youtube.com/watch?v=QpdhBUYk7Kk](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
++ [https://www.youtube.com/watch?v=-CuY5ADwn24](https://www.youtube.com/watch?v=-CuY5ADwn24)
 
 You will have to create the Entity Relationship Diagram for Instagram's Database - a very similar diagram to this one:
 
@@ -40,8 +40,8 @@ Your job is to update the `src/models.py` file with the code needed to replicate
 The project is using the SQLAlchemy Python library to generate the database.
 
 - What tables do you think Instagram might have on its database: E.g: Post, User, etc.?
-- What properties should go inside the user? or inside the Post table?
-- Please add at least 4 models with all of its properties.
+- What properties should go inside the User? or inside the Post table?
+- Please add at least 4 models with all of their properties.
 - Refresh the `diagram.png` file at the end by running `$ python src/models.py` on the console.
 
 This and many other projects are built by students as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
