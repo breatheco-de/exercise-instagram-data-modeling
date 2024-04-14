@@ -7,23 +7,36 @@ from eralchemy2 import render_er
 
 Base = declarative_base()
 
-class Person(Base):
-    __tablename__ = 'person'
-    # Here we define columns for the table person
-    # Notice that each column is also a normal Python instance attribute.
+class User(Base):
+    __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
-    name = Column(String(250), nullable=False)
+    username = Column(String(250), nullable=False)
+    email = Column(String(250),nullable=False)
+    password = Column (String(250),nullable=False)
 
-class Address(Base):
-    __tablename__ = 'address'
-    # Here we define columns for the table address.
-    # Notice that each column is also a normal Python instance attribute.
+class Post(Base):
+    __tablename__ = 'posts'
     id = Column(Integer, primary_key=True)
-    street_name = Column(String(250))
-    street_number = Column(String(250))
-    post_code = Column(String(250), nullable=False)
-    person_id = Column(Integer, ForeignKey('person.id'))
-    person = relationship(Person)
+    user_id = Column (Integer, ForeignKey('users.id'),nullable=False)
+    user = relationship ('User')
+    url = Column (String(250),nullable=False)
+    description = Column (String(250),nullable=False)
+
+class Like(Base):
+    __tablename__='likes'
+    id = Column(Integer, primary_key=True)
+    user_id = Column (Integer, ForeignKey('users.id'),nullable=False)
+    user = relationship ('User')
+    post_id = Column (Integer, ForeignKey('posts.id'),nullable=False)
+    post = relationship(Post)
+    description = Column (String (500),nullable=False)
+
+class Follower (Base):
+    __tablename__='followers'
+    id = Column(Integer, primary_key=True)
+    user_id = Column (Integer, ForeignKey('users.id'),nullable=False)
+    user_follower = Column (Integer, ForeignKey('users.id'),nullable=False)
+    user = relationship ('User')
 
     def to_dict(self):
         return {}
