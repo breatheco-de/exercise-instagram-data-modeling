@@ -29,15 +29,15 @@ class Followers(Base):
 class Comment(Base):
     __tablename__ = 'comment'
     id = Column(Integer, primary_key = True)
-    comment_Text = Column(String(200), nullable=False)
-    author_id = Column(Integer, ForeignKey('users.id'), primary_key=True)
-    post_id = Column(Integer, ForeignKey('post.id'), primary_key=True)
+    comment_text = Column(String(200), nullable=False)
+    author_id = Column(Integer, ForeignKey('users.id'))
+    post_id = Column(Integer, ForeignKey('post.id'))
     users = relationship("Users")    
 
 class Post(Base):
     __tablename__ ='post'
     id = Column(Integer, primary_key = True)
-    user_id = Column(Integer,ForeignKey('users.id'), primary_key=True)
+    user_id = Column(Integer,ForeignKey('users.id'))
     users = relationship("Users")
 
 class Media(Base):
@@ -45,7 +45,7 @@ class Media(Base):
     id = Column(Integer, primary_key = True)
     type = Column(String)
     url = Column(String)
-    post_id = Column(Integer, ForeignKey('post.id'), primary_key=True)
+    post_id = Column(Integer, ForeignKey('post.id'))
     users = relationship("Users")
     
 
