@@ -22,8 +22,8 @@ class Users(Base):
 
 class Followers(Base):
     __tablename__ = 'followers'   
-    user_from_id = Column(Integer, ForeignKey("users.id"), primary_key=True)
-    user_to_id = Column(Integer, ForeignKey("users.id"), primary_key=True)
+    user_from_id = Column(Integer, primary_key=True)
+    user_to_id = Column(Integer, ForeignKey("users.id"))
     users = relationship("Users")
 
 class Comment(Base):
