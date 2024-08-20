@@ -1,6 +1,6 @@
 import os
 import sys
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, Date, func
 from sqlalchemy.orm import relationship, declarative_base
 from sqlalchemy import create_engine
 from eralchemy2 import render_er
@@ -28,7 +28,26 @@ class Address(Base):
 class User(Base):
     __tablename__ = 'user'
     id = Column(Integer, primary_key=True)
-    username = Column(String(100))
+    username = Column(String(100), unique=True)
+    email = Column(String(100), unique=True)
+    password = Column(String(12))
+    phone = Column(String(9))
+    firstname = Column(String(30))
+    lastname = Column(String(30))
+
+class Follower(Base):
+    __tablename__ = 'follower'
+    id = Column(Integer, primary_key=True)
+    user_from_id = Column(Integer, ForeignKey('user.id'))
+    user_to_id = Column(Integer, ForeignKey('user.id'))
+
+class Post(Base):
+    __tablename__ = 'post'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    date = Column(Date, default=func.now())
+    title = Column(String(100))
+    description = Column(String(400))
     
 
     def to_dict(self):
