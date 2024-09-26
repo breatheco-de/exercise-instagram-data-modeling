@@ -8,7 +8,7 @@ Dentro del archivo `src/models.py` encontrarás un par de clases que describen u
 
 Aquí hay un video de 10 minutos que explica qué es UML: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
 
-Vamos a crear el Diagrama de relación de entidad para la base de datos de Instagram, un diagrama muy similar a este:
+Vamos a crear el diagrama de relación de entidad para la base de datos de Instagram, un diagrama muy similar a este:
 
 ![Diagrama de Instagram](https://github.com/breatheco-de/exercise-instagram-data-modeling/blob/master/assets/example.png?raw=true)
 [Clic para abrir el diagrama](https://app.quickdatabasediagrams.com/#/d/LxNXQZ)
