@@ -2,7 +2,11 @@
 # Create the database model for Instagram
 <!--endhide-->
 
-**Important**: To do this activity you need to `fork` [this repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) into your **Github** account and then open the forked repo on Codespaces (recommended) or Gitpod.
+<onlyfor saas="false" withBanner="false">
+
+## 🌱 How to start this project
+
+**Important**: To do this activity you need to `fork` [this repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) into your **Github** account and then open the forked repo on Gitpod.
 
 Inside the `src/models.py` file, you will find a couple of classes describing an example database.
 
@@ -13,6 +17,8 @@ The `diagram.png` file generates a database chart based on the classes that you 
 Please watch these two short videos explaining ERDs: 
 + [https://www.youtube.com/watch?v=QpdhBUYk7Kk](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
 + [https://www.youtube.com/watch?v=-CuY5ADwn24](https://www.youtube.com/watch?v=-CuY5ADwn24)
+
+</onlyfor>
 
 You will have to create the Entity Relationship Diagram for Instagram's Database - a very similar diagram to this one:
 
