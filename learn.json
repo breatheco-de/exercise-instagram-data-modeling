@@ -3,6 +3,7 @@
 	"title" : "Building Instagram.com Database Model",
 	"slug" : "instagram-data-modeling",
 	"duration" : 3,
+	"template_url": "self",
 	"difficulty": "easy",
 	"preview": "https://github.com/breatheco-de/exercise-instagram-data-modeling/blob/master/assets/preview.png?raw=true",
 	"technologies": ["sql", "sqlalchemy", "uml", "data-modeling"],
