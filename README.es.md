@@ -1,8 +1,10 @@
 <!--hide-->
+
 # Crea el modelo de base de datos para Instagram
+
 <!--endhide-->
 
-**Importante**: Para realizar esta actividad necesitas hacer un `fork` de [este repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) en tu cuenta de **Github** y luego, abre el *fork* en Codespaces (recomendado) o Gitpod.
+**Importante**: Para realizar esta actividad necesitas hacer un `fork` de [este repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) en tu cuenta de **Github** y luego, abre el _fork_ en Codespaces (recomendado) o Gitpod.
 
 Dentro del archivo `src/models.py` encontrarás un par de clases que describen una base de datos de ejemplo.
 
@@ -15,7 +17,6 @@ Vamos a crear el Diagrama de relación de entidad para la base de datos de Insta
 
 > 🔥 Puedes usar esta herramienta GRATUITA para practicar tu diagrama por primera vez: https://app.quickdatabasediagrams.com/#/d/
 
-
 ## 💻 Instalación
 
 1. Entra dentro del environment (entorno) `$ pipenv shell`
@@ -25,7 +26,6 @@ Vamos a crear el Diagrama de relación de entidad para la base de datos de Insta
 3. Genera el diagrama tantas veces como sea necesario `$ python src/models.py`
 
 4. ¡Abre el archivo `diagram.png` para ver tu diagrama UML!
-
 
 ## 📝 Instrucciones
 
