@@ -1,6 +1,10 @@
 {
 	"status": "published",
-	"title" : "Building Instagram.com Database Model",
+	"gitpod": true,
+	"title" : {
+    "us": "Building Instagram.com Database Model",
+    "es": "Construyendo el Modelo de Datos de Instagram"
+},
 	"slug" : "instagram-data-modeling",
 	"duration" : 3,
 	"difficulty": "easy",
@@ -8,10 +12,16 @@
 	"preview": "https://github.com/breatheco-de/exercise-instagram-data-modeling/blob/master/assets/preview.png?raw=true",
 	"technologies": ["sql", "sqlalchemy", "uml", "data-modeling"],
 	"syntax": "python",
-	"description" : "Use your recently adquired knowledge to build instagram.com user stories",
+	"description" :  {
+    "us": "Build a database model for Instagram and learn about database design, table relationships, and ERD diagrams. You'll create structures for users, posts, comments, and more using SQLAlchemy. Improve your data modeling skills and understanding of social media platforms with this hands-on project.",
+    "es": "Desarrolla un modelo de base de datos para Instagram y aprende sobre diseño de bases de datos, relaciones entre tablas y diagramas ERD. Crearás estructuras para usuarios, publicaciones, comentarios y más, usando SQLAlchemy. Mejora tus habilidades en modelado de datos y comprensión de plataformas sociales con este proyecto práctico."
+},
 	"talents": [
 		{ "badge": "fully-committed", "points": 5 }
 	],
     "autoPlay": false,
-    "projectType": "project"
+    "projectType": "project",
+    "telemetry": {
+    "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id=191"
+}
 }
