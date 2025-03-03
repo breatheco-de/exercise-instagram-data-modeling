@@ -1,7 +1,7 @@
 import os
 import sys
-from sqlalchemy.orm import declarative_base, Mapped, mapped_column
-from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_base, Mapped, mapped_column, relationship
+from sqlalchemy import create_engine, String, ForeignKey
 from eralchemy2 import render_er
 
 Base = declarative_base()
@@ -12,6 +12,7 @@ class Person(Base):
     # Notice that each column is also a normal Python instance attribute.
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(nullable=False)
+    address: Mapped["Address"] = relationship(back_populates="person")
 
 class Address(Base):
     __tablename__ = 'address'
@@ -21,6 +22,8 @@ class Address(Base):
     street_name: Mapped[str]
     street_number: Mapped[str]
     post_code: Mapped[str] = mapped_column(nullable=False)
+    person_id: Mapped[int] = mapped_column(ForeignKey("person.id"))
+    person: Mapped["Person"] = relationship(back_populates="address")
 
     def to_dict(self):
         return {}
