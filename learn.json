@@ -11,12 +11,7 @@
 	"difficulty": "easy",
 	"solution": "https://github.com/breatheco-de/exercise-instagram-data-modeling/tree/solution",
 	"preview": "https://github.com/breatheco-de/exercise-instagram-data-modeling/blob/master/assets/preview.png?raw=true",
-	"technologies": [
-		"sql",
-		"sqlalchemy",
-		"uml",
-		"data-modeling"
-	],
+	"technologies": ["sql", "sqlalchemy", "uml", "data-modeling"],
 	"syntax": "python",
 	"description": {
 		"us": "Build a database model for Instagram and learn about database design, table relationships, and ERD diagrams. You'll create structures for users, posts, comments, and more using SQLAlchemy. Improve your data modeling skills and understanding of social media platforms with this hands-on project.",
