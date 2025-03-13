@@ -7,10 +7,10 @@
 
 ## 🌱 How to start this project
 
-**Important**: To do this activity you need to `fork` [this repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) into your **Github** account and then open the forked repo on [Codespaces](https://4geeks.com/lesson/what-is-github-codespaces) (recommended) or Gitpod.
+**Important**: To do this activity you need to `fork` [this repo](https://github.com/4GeeksAcademy/flask-rest-hello) into your **Github** account and then open the forked repo on [Codespaces](https://4geeks.com/lesson/what-is-github-codespaces) (recommended) or Gitpod.
 
 
-Inside the `src/models.py` file, you will find a couple of classes describing an example database.
+In the `src/models.py` file of the forked repository, you will find several classes that represent the structure of a sample database.
 
 Here is a 10 min video explaining what UML is: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
 
@@ -36,9 +36,9 @@ You will have to create the Entity Relationship Diagram for Instagram's Database
 
 2. Install all dependencies `$ pipenv install`
 
-3. Generate the diagram as many times as you need `$ python src/models.py`
+3. To generate a database diagram as many times as needed, run `$ pipenv run diagram`
 
-4. Open the file `diagram.png` to check out your ERD diagram!
+4. Once the `diagram.png` file is created in the root of the project, open it to see the UML representation of your database.
 
 
 ## 📝Instructions

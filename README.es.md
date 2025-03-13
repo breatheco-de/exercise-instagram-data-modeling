@@ -7,9 +7,9 @@
 
 ## 🌱 Cómo iniciar este proyecto
 
-**Importante**: Para realizar esta actividad necesitas hacer un `fork` de [este repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) en tu cuenta de **Github** y luego, abrir el *fork* en Gitpod.
+**Importante**: Para realizar esta actividad necesitas hacer un `fork` de [este repo](https://github.com/4GeeksAcademy/flask-rest-hello) en tu cuenta de **Github** y luego abrir el *fork* en [Codespaces](https://4geeks.com/lesson/what-is-github-codespaces) (recomendado) o Gitpod.
 
-Dentro del archivo `src/models.py` encontrarás un par de clases que describen una base de datos de ejemplo.
+En el archivo `src/models.py` del repositorio forkeado, encontrarás varias clases que representan la estructura de una base de datos de ejemplo
 
 Aquí hay un video de 10 minutos que explica qué es UML: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
 
@@ -28,9 +28,9 @@ Vamos a crear el Diagrama de relación de entidad para la base de datos de Insta
 
 2. Instala todas las dependencias `$ pipenv install`
 
-3. Genera el diagrama tantas veces como sea necesario `$ python src/models.py`
+3. Para generar un diagrama de la base de datos tantas veces como sea necesario `$ pipenv run diagram`
 
-4. ¡Abre el archivo `diagram.png` para ver tu diagrama UML!
+4. Una vez creado el archivo `diagram.png` en la raiz del proyecto, abrelo para ver la representación UML de tu base de datos.
 
 ## 📝 Instrucciones
 
